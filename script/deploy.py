@@ -4,7 +4,7 @@ from moccasin.boa_tools import VyperContract
 from src import buy_me_a_coffee
 
 def deploy_coffee(price_feed: VyperContract) -> VyperContract:
-    coffee:VyperContract = buy_me_a_coffee.deploy(price_feed)
+    coffee: VyperContract = buy_me_a_coffee.deploy(price_feed)
 
     active_network = get_active_network()
     if active_network.has_explorer() and active_network.is_local_or_forked_network() is False:

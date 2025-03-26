@@ -9,6 +9,6 @@ def deploy_feed() -> VyperContract:
     return mock_v3_aggregator.deploy(STARTING_DECIMALS, STARTING_PRICE)
 
 
-def moccasin_main()-> VyperContract:
+def moccasin_main() -> VyperContract:
     return deploy_feed()
     

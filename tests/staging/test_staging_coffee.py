@@ -4,8 +4,12 @@
 #from test.conftest import SEND_VALUE
 #import boa
 
+
 # WILL ONLY WORK ON A LIVE NETWORK !!!
-# JUST FOR INFO, setup not quit right in the deploy.py file for Staging test!!!
+# JUST FOR INFO, setup not quit right in the deploy.py file for Staging test!!! 
+# You can not work with the same fixtures like in the unittest
+# --> Better to have a new conftest in the staging folder!
+
 
 #@pytest.mark.staging
 #@pytest.mark.local
@@ -17,5 +21,5 @@
 #    coffee.fund(value = SEND_VALUE)
 #    amount_funded = coffee.address_to_amount_funded(boa.env.eoa) # boa.env.eoa = currently active account
 #    assert amount_funded == SEND_VALUE
-#    coffe.withdraw()
+#    coffee.withdraw()
 #    assert boa.env.get_balance(coffee.address) == 0
