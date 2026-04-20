@@ -817,10 +817,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "moccasin" },
+    { name = "vyper" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "moccasin", specifier = ">=0.3.8" }]
+requires-dist = [
+    { name = "moccasin", specifier = ">=0.3.8" },
+    { name = "vyper", specifier = "==0.4.0" },
+]
 
 [[package]]
 name = "nest-asyncio"

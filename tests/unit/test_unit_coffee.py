@@ -85,7 +85,7 @@ def test_fund_10_user_with_money(coffee):
         with boa.env.prank(funder):
             coffee.fund(value=SEND_VALUE)
             
-    starting_balance_fund  = boa.env.get_balance(coffee.address)
+    starting_balance_fund = boa.env.get_balance(coffee.address)
     
     boa.env.set_balance(coffee.OWNER(), SEND_VALUE*3)
     starting_balance_owner = boa.env.get_balance(coffee.OWNER())
@@ -233,7 +233,7 @@ def test_default_function_calls_fund_directly(coffee, account):
 def test_default_function_low_level(coffee, account):
     """Using very low-level approach to trigger __default__"""
     # Setup
-    boa.env.set_balance(account.address, SEND_VALUE * 10)
+    boa.env.set_balance(account.address, SEND_VALUE*10)
     
     # Get initial state
     initial_contract_balance = boa.env.get_balance(coffee.address)

@@ -1,12 +1,10 @@
-[project]
-src = "src"
 
 [networks.contracts.price_feed]
 deployer_script = "script/deploy_mocks.py"
 abi = "mock_v3_aggregator"
 
-[networks.contracts.coffee]
-deployer_script = "script/deploy.py"
+#[networks.contracts.coffee]
+#deployer_script = "script/deploy.py"
 
 [networks.sepolia]
 url = "$SEPOLIA_RPC_URL"
@@ -22,5 +20,4 @@ address = "0x694AA1769357215DE4FAC081bf1f309aDC325306" # docs.chain.link/data-fe
 url = "http://127.0.0.1:8545"
 default_account_name = "anvil1"
 save_to_db = true
-
 # You can view all configuration options at https://cyfrin.github.io/moccasin/all_moccasin_toml_parameters.html

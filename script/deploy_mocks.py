@@ -3,7 +3,7 @@ from moccasin.boa_tools import VyperContract
 
 
 STARTING_DECIMALS = 8
-STARTING_PRICE = int(2000e8)
+STARTING_PRICE = int(2000e8) # 2000$ in uint8
 
 def deploy_feed() -> VyperContract:
     return mock_v3_aggregator.deploy(STARTING_DECIMALS, STARTING_PRICE)
