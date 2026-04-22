@@ -28,6 +28,8 @@ def test_fund_with_money(coffee, account):
 def test_non_owner_cannot_withdraw(coffee, account):
 
     boa.env.set_balance(account.address, SEND_VALUE * 3)
+    coffee.fund(value=SEND_VALUE)
+    
     with boa.env.prank(RANDOM_USER):
         with boa.reverts("Not the contract owner!"):
             coffee.withdraw()
@@ -40,7 +42,7 @@ def test_non_owner_cannot_withdraw2(coffee_funded, account):
             coffee_funded.withdraw()
     assert boa.env.get_balance(coffee_funded.address) > 0
 
-def test_owner_can_withdraw(coffee, account):
+def test_owner_can_withdraw(coffee):
     boa.env.set_balance(coffee.OWNER(), SEND_VALUE * 3)
     with boa.env.prank(coffee.OWNER()):
         coffee.fund(value=SEND_VALUE)
