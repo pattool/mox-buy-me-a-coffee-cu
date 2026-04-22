@@ -2,6 +2,18 @@
 
 🐍 Welcome to your Moccasin project!
 
+## Installation
+
+If you need a virtual environment:
+
+```bash
+# macOS / Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv venv
+uv sync
+source .venv/bin/activate
+```
+
 ## Quickstart
 
 1. Deploy to a fake local network that titanoboa automatically spins up!
